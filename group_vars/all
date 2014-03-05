@@ -1,0 +1,4 @@
+username: "vagrant"
+home_dir: "/home/{{username}}"
+rvm_dir: "{{home_dir}}/.rvm"
+rvm: "{{rvm_dir}}/bin/rvm"

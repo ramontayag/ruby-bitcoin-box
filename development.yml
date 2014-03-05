@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: "{{username}}"
+
+  roles:
+    - auth
+    - locale
+    - common
+    - rvm
+    - zsh

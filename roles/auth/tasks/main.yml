@@ -1,0 +1,6 @@
+---
+- name: copy public key
+  copy: src=files/{{item}} dest={{home_dir}}/.ssh/{{item}}
+  with_items:
+    - id_rsa
+    - id_rsa.pub
