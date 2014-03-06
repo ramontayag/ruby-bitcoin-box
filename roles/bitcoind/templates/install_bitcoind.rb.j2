@@ -1,0 +1,14 @@
+require "fileutils"
+require "open-uri"
+require 'net/http'
+require "pathname"
+
+BITCOIND_URI = URI.parse("http://sourceforge.net/projects/bitcoin/files/Obsolete/bitcoin-0.7.2/bitcoin-0.7.2-linux.tar.gz/download")
+HOME_DIR = "/home/{{username}}"
+FILENAME = Pathname.new("bitcoin-0.7.2-linux.tar.gz")
+
+`wget -O #{FILENAME} #{BITCOIND_URI}`
+`tar zxvf #{FILENAME}`
+path_to_bitcoind_bin_dir = File.join(HOME_DIR, FILENAME.basename("*.tar.gz"), "bin", "64")
+puts path_to_bitcoind_bin_dir
+`echo "export PATH=#{path_to_bitcoind_bin_dir}:$PATH" >> .zshrc`
