@@ -64,3 +64,6 @@
 
 - name: copy zshrc
   copy: src=zshrc dest={{home_dir}}/.zshrc
+
+- name: Create .zsh.after for hooks
+  shell: "mkdir {{home_dir}}/.zsh.after creates={{home_dir}}/.zsh.after"

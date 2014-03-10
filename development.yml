@@ -8,4 +8,5 @@
     - common
     - rvm
     - zsh
+    - direnv
     - bitcoind
