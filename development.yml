@@ -6,8 +6,8 @@
     - auth
     - locale
     - common
-    - rvm
     - zsh
+    - rvm
     - direnv
     - fasd
     - bitcoind

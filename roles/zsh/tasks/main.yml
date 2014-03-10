@@ -56,5 +56,8 @@
 - name: copy zshrc
   copy: src=zshrc dest={{home_dir}}/.zshrc
 
+- name: Copy vim mode
+  copy: src=vim-mode.zsh dest={{home_dir}}/.zsh.after/vim-mode.zsh
+
 - name: Create .zsh.after for hooks
   shell: "mkdir {{home_dir}}/.zsh.after creates={{home_dir}}/.zsh.after"
