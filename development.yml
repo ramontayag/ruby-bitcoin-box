@@ -9,4 +9,5 @@
     - rvm
     - zsh
     - direnv
+    - fasd
     - bitcoind

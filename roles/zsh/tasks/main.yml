@@ -53,15 +53,6 @@
 - name: copy tmux config
   copy: "src=tmux.conf dest={{home_dir}}/.tmux.conf"
 
-- name: copy fasd
-  copy: "src=clvv-fasd-1.0.1-0-g4822024.tar.gz dest={{home_dir}}/fasd-1.0.1.tar.gz"
-
-- name: extract fasd
-  shell: "tar -zxf {{home_dir}}/fasd-1.0.1.tar.gz creates={{home_dir}}/clvv-fasd-4822024"
-
-- name: rename fasd home
-  shell: "mv {{home_dir}}/clvv-fasd-4822024 {{home_dir}}/fasd creates={{home_dir}}/fasd"
-
 - name: copy zshrc
   copy: src=zshrc dest={{home_dir}}/.zshrc
 

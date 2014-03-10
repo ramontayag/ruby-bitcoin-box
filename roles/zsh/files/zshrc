@@ -26,9 +26,5 @@ fi
 bindkey -v
 bindkey "^R" history-incremental-search-backward
 
-#FASD
-PATH=$HOME/fasd:$PATH
-eval "$(fasd --init auto)"
-
 # Execute the config files in .zsh.after
 for config_file ($HOME/.zsh.after/*.zsh) source $config_file
