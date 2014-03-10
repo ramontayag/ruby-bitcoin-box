@@ -4,3 +4,6 @@
 
 - name: "Download and install bitcoind v0.7.2"
   shell: ruby install_bitcoind.rb creates={{home_dir}}/bitcoin-0.7.2-linux
+
+- name: Add bitcoind to path
+  template: src=bitcoind.zsh.j2 dest={{home_dir}}/.zsh.after/bitcoind.zsh
