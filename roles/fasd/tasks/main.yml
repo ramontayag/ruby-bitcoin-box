@@ -7,3 +7,6 @@
 
 - name: rename fasd home
   shell: "mv {{home_dir}}/clvv-fasd-4822024 {{home_dir}}/fasd creates={{home_dir}}/fasd"
+
+- name: Hook fasd into zsh
+  copy: src=fasd.zsh dest={{home_dir}}/.zsh.after/fasd.zsh
