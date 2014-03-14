@@ -19,3 +19,7 @@ On the host, copy the following then tweak to your desire. For example, you may 
     cp development{.sample,}
 
     ansible-playbook development.yml -i development
+
+## BTC Love
+
+If you find this useful, consider sharing some BTC love: `1PwQWijmJ39hWXk9X3CdAhEdExdkANEAPk`
