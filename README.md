@@ -2,6 +2,7 @@ Vagrant development box for Bitcoin Ruby projects:
 
 - [bit_wallet](https://github.com/ramontayag/bitcoin_wallet)
 - [bitsy](https://github.com/ramontayag/bitsy)
+- [bitsy_client](https://github.com/ramontayag/bitsy_client-ruby)
 - [ruby-bitcoin_testnet](https://github.com/ramontayag/ruby-bitcoin_testnet)
 
 # Booting for the first time
