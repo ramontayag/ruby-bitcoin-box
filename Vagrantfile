@@ -21,6 +21,6 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--cpus", VM_CPU]
     v.customize ["modifyvm", :id, "--ioapic", "on"]
   end
-  config.vm.synced_folder "mnt", "/vagrant", id: "vagrant-root", :nfs => true
+  config.vm.synced_folder "mnt", "/home/vagrant/src", id: "vagrant-src", nfs: true
 
 end
