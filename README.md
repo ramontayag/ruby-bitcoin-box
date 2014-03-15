@@ -21,6 +21,19 @@ On the host, copy the following then tweak to your desire. For example, you may 
 
     ansible-playbook development.yml -i development
 
+## Troubleshooting
+
+If you get this error while running `vagrant up`:
+
+    [default] Configuring and enabling network interfaces...
+    The following SSH command responded with a non-zero exit status.
+    Vagrant assumes that this means the command failed!
+    /sbin/ip addr flush dev eth1 2> /dev/null
+    Stdout from the command:
+    Stderr from the command:
+
+then `vagrant ssh` into the VM and `sudo rm /etc/udev/rules.d/70-persistent-net.rules` as written [here](https://github.com/mitchellh/vagrant/issues/1351).
+
 ## BTC Love
 
 If you find this useful, consider sharing some BTC love: `1PwQWijmJ39hWXk9X3CdAhEdExdkANEAPk`
