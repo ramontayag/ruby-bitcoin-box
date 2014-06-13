@@ -3,9 +3,9 @@ require "open-uri"
 require 'net/http'
 require "pathname"
 
-BITCOIND_URI = URI.parse("http://sourceforge.net/projects/bitcoin/files/Obsolete/bitcoin-0.7.2/bitcoin-0.7.2-linux.tar.gz/download")
+BITCOIND_URI = URI.parse("http://sourceforge.net/projects/bitcoin/files/Obsolete/bitcoin-0.8.0/bitcoin-0.8.0-linux.tar.gz/download")
 HOME_DIR = "/home/{{username}}"
-FILENAME = Pathname.new("bitcoin-0.7.2-linux.tar.gz")
+FILENAME = Pathname.new("bitcoin-0.8.0-linux.tar.gz")
 
 `wget -O #{FILENAME} #{BITCOIND_URI}`
 `tar zxvf #{FILENAME}`
