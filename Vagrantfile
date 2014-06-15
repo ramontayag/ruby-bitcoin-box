@@ -5,7 +5,7 @@ require "yaml"
 CONFIG = YAML.load_file("config.yml")
 
 VM_BOX="ruby-bitcoin-box"
-VM_BOX_URL="http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box"
+VM_BOX_URL="https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
 VM_IP_ADDRESS=CONFIG["ip"]
 VM_MEMORY=CONFIG["memory"]
 VM_CPU=CONFIG["cpu"]
