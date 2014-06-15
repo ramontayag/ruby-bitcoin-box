@@ -1,0 +1,12 @@
+---
+- name: Install Docker
+  apt: name=docker.io state=present
+  sudo: True
+
+- name: Symlink to docker exec
+  file: src=/usr/bin/docker.io dest=/usr/local/bin/docker state=link
+  sudo: True
+
+- name: Change pointer to docker exec
+  lineinfile: dest=/etc/bash_completion.d/docker.io line="complete -F _docker docker"
+  sudo: True
