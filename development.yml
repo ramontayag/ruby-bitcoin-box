@@ -4,6 +4,7 @@
 
   roles:
     - auth
+    - apt
     - locale
     - common
     - zsh
