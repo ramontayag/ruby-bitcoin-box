@@ -2,8 +2,11 @@
 - name: "Copy install script for bitcoind"
   template: src=install_bitcoind.rb.j2 dest={{home_dir}}/install_bitcoind.rb
 
-- name: "Download and install bitcoind v0.8.0"
-  shell: ruby install_bitcoind.rb creates={{home_dir}}/bitcoin-0.8.0-linux
+- name: "Download and install bitcoind v0.9.2.1"
+  shell: ruby install_bitcoind.rb creates={{home_dir}}/bitcoin-0.9.2.1-linux
 
 - name: Add bitcoind to path
   template: src=bitcoind.zsh.j2 dest={{home_dir}}/.zsh.after/bitcoind.zsh
+
+- name: Copy the bitcoin.conf file
+  copy: src=bitcoin.conf dest={{home_dir}}/.bitcoin/bitcoin.conf mode=600
